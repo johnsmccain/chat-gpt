@@ -1,0 +1,130 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background: linear-gradient(
+    90deg, 
+    rgba(  19, 0, 0, 0.938), 
+    rgb(3, 1, 29),
+    rgb(29, 1, 21)
+  );
+  /* background: #000; */
+}
+
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.chat{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.chat-box{
+  display: flex;
+  flex-direction: column;
+  /* height: 70%; */
+  overflow-y: scroll;
+  /* overflow-y: hidden; */
+}
+.message{
+  display: flex;
+  /* width: fit-content; */
+  width: max-content;
+  margin: 10px;
+  padding: 20px;
+  max-width: 80%;
+  flex-wrap: wrap;
+  
+  /* -ms-text-overflow: ellipsis; */
+  /* border-radius: 12px 12px 0 12px; */
+  /* float: right; */
+  background: #213547;
+  color: antiquewhite;
+}
+.message.me{
+  border-radius: 12px 12px 0 12px;
+  align-self: flex-end;
+  
+}
+.message.ai{
+  border-radius: 12px 12px 12px 0;
+  background: #000;
+}
+.chat-inbox{
+  padding: 1rem;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  /* position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0; */
+  justify-content: space-between;
+}
+
+.chat-inbox > textarea{
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  padding: 20px;
+  outline: none;
+  border: none;
+}
+.chat-inbox > button{
+  /* align-self: flex-end; */
+  padding: 20px;
+  margin: 10px;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 18px;
+}
+.btn{
+  padding: 10px;
+  border: none;
+}
